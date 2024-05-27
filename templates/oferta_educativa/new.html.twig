@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nueva OfertaEducativa{% endblock %}
+
+{% block body %}
+    <h1>Crear nueva OfertaEducativa</h1>
+
+    {{ include('oferta_educativa/_form.html.twig') }}
+
+    <a href="{{ path('app_oferta_educativa_index') }}">Volver</a>
+{% endblock %}

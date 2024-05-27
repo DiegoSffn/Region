@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('../public/css/sb-admin-2.css') }}"> 
+        <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/global_form.css') }}">
+      
+    {% endblock %}
+
+    {% block javascripts %}
+        <script src="{{ asset('../public/js/scripts.js') }}"></script>
+        <script src="{{ asset('js/home.js') }}"></script>
+       
+    {% endblock %}
+</head>
+<body>
+    {% include 'flash_messages.html.twig' %} {# Mensajes flash #}
+
+    <div class="header">
+        <div class="logo">
+            <a href="#"><img src="{{ asset('img/logo1.jpeg') }}" alt="Logo" class="logo-image"></a>
+        </div>
+        <div class="welcome-msg">
+            <h1>Bienvenidos a la Preinscripcion de Carreras Terciarias de la Pcia de Bs As</h1>
+        </div>
+        <div class="login-button">
+            <a href="{{ path('app_login') }}">Iniciar sesión</a>
+        </div>
+    </div>
+
+    <div class="header-bottom">
+       
+        <div class="menu-buttons">
+            <a class="menu-button" href="{{ path('app_home') }}">Inicio</a>
+            <a class="menu-button" href="{{ path('app_inst_btn') }}">Institutos</a>
+            <a class="menu-button" href="{{ path('app_tec_btn') }}">Tecnicaturas</a>
+            <a class="menu-button" href="{{ path('app_pre_btn') }}">Pre_Inscripcion</a>
+            <a class="menu-button" href="{{ path('app_bus_btn') }}">Busqueda</a>
+        </div>
+    </div>
+
+
+
+    {% block content %} {% endblock %}
+
+</body>
+</html>

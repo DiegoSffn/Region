@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tecnicatura{% endblock %}
+
+{% block body %}
+    <h1>Tecnicaturas</h1>
+
+    <table class="table" border=1>
+        <tbody>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ tecnicatura.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Duracion</th>
+                <td>{{ tecnicatura.duracion }}</td>
+            </tr>
+            <tr>
+                <th>Cantidad_asignaturas</th>
+                <td>{{ tecnicatura.cantidadAsignaturas }}</td>
+            </tr>
+            <tr>
+                <th>Numero_resolucion</th>
+                <td>{{ tecnicatura.numeroResolucion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

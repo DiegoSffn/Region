@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Preinscripciones{% endblock %}
+
+{% block body %}
+
+<h1> Preinscripciones </h1>
+<table class=tabla_home border=1>
+            <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Carrera</th>
+            <th>Turno</th>
+            <th>Instituto</th>
+            </tr>
+       
+          {% for preinscripcion in preinscripcions %}
+            <tr>
+                <td>{{ preinscripcion.alumno.persona.nombre }}</td>               
+                <td>{{ preinscripcion.alumno.persona.apellido }}</td>
+                <td>{{ preinscripcion.alumno.persona.email }}</td>
+                <td>{{ preinscripcion.tecnicatura.nombre }}</td>
+                <td>{{ preinscripcion.turno.descripcion }}</td>
+                <td>{{ preinscripcion.instituto.numero }}</td>
+            </tr>
+       
+          {% endfor %}
+       
+</table>
+
+<a href="{{ path('app_preinscripcion_new') }}">Crear</a>
+<a href="{{ path('app_preinscripcion_show', {'id': preinscripcion.id}) }}">Mostrar</a>
+<a href="{{ path('app_preinscripcion_edit', {'id': preinscripcion.id}) }}">Editar</a>
+{% endblock %}

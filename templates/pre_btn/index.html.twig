@@ -1,0 +1,23 @@
+{% extends 'inicio.html.twig' %}
+
+{% block title %}Página de Busqueda - Región de Terciarios{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+   
+    <div class="content">
+        {% include 'preinscripcion/nueva.html.twig' with {'form': form} %}
+    </div> 
+
+{% endblock %}

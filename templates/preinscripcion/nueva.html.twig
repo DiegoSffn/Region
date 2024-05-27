@@ -1,0 +1,107 @@
+<div class=m-5 table>  
+
+  {% block title %}{% endblock %}
+
+  {% block body %}      
+
+    {#   {{ include('preinscripcion/_form.html.twig') }} 
+      {{ form_start(form) }} #}
+
+  <table>
+    <tr class=m-2>
+      <td><b>Seleccione una carrera</b></td>
+       
+    </tr>
+    <tr>
+      <td></td>
+      <td> {{ form_widget(form.ofertaEducativa.tecnicatura.nombre) }} </td> 
+
+    </tr>
+    
+    <tr class=m-2>
+      <td><b>Complete sus datos personales</b></td>
+    </tr>
+    
+    <tr class=m-2> 
+      <td> Fecha de preinscripcion:</td>
+      <td> {{ form_widget(form.fecha) }} </td> 
+    </tr>
+
+    <tr>
+      <td> Nombre:</td>
+      <td> {{ form_widget(form.alumno.persona.nombre) }} </td> 
+    </tr>
+    <tr>
+      <td> Apellido:</td>
+      <td> {{ form_widget(form.alumno.persona.apellido) }} </td> 
+    </tr> 
+    <tr>
+      <td> Fecha de Nacimiento:</td>
+      <td> {{ form_widget(form.alumno.persona.fecha_nacimiento) }} </td> 
+    </tr>
+    <tr>
+      <td> DNI / Pasaporte:</td>
+      <td> {{ form_widget(form.alumno.persona.dni_pasaporte) }} </td> 
+    </tr>
+    <tr>
+      <td> Genero:</td>
+      <td> {{ form_widget(form.alumno.persona.genero) }} </td> 
+    </tr>
+    <tr>
+      <td> Email:</td>
+      <td> {{ form_widget(form.alumno.persona.email) }} </td> 
+    </tr>
+    <tr>
+      <td> Telefono:</td>
+      <td> {{ form_widget(form.alumno.persona.telefono) }} </td> 
+    </tr>
+    <tr>
+      <td> Naionalidad:</td>
+      <td> {{ form_widget(form.alumno.persona.pais) }} </td> 
+    </tr>
+    <tr>
+      <td> Partido:</td>
+      <td> {{ form_widget(form.alumno.persona.partido) }} </td> 
+    </tr>
+    <tr>
+      <td> Localidad:</td>
+      <td> {{ form_widget(form.alumno.persona.localidad) }} </td> 
+    </tr>
+    <tr>
+      <td> Calle:</td>
+      <td> {{ form_widget(form.alumno.persona.calle) }} </td> 
+    </tr>
+    <tr>
+      <td> Numero:</td>
+      <td> {{ form_widget(form.alumno.persona.numero) }} </td> 
+    </tr>
+    <tr>
+      <td> Piso:</td>
+      <td> {{ form_widget(form.alumno.persona.piso) }} </td> 
+    </tr>
+    <tr>
+      <td> Departamento:</td>
+      <td> {{ form_widget(form.alumno.persona.departamento) }} </td> 
+    </tr>
+    <tr>
+      <td> Pasillo:</td>
+      <td> {{ form_widget(form.alumno.persona.pasillo) }} </td> 
+    </tr>
+    <tr>
+      <td> Tituo secundario:</td>
+      <td> {{ form_widget(form.alumno.titulo_sec) }} </td> 
+    </tr>
+    <tr>
+      <td> Escuela Secundaria:</td>
+      <td> {{ form_widget(form.alumno.escuela_sec) }} </td> 
+    </tr>
+    <tr>
+      <td> Año de Egreso:</td>
+      <td> {{ form_widget(form.alumno.anio_egreso) }} </td> 
+    </tr>  
+  </table>
+      {{ form_widget(form) }}
+      <button class="btn_1">GUARDAR</button>
+      <a href="{{ path('app_preinscripcion_index') }}">Volver</a>
+  {% endblock %}
+</div>

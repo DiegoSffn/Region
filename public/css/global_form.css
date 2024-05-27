@@ -1,0 +1,12 @@
+/* global_form.css */
+
+/* Estilo para los labels de todos los formularios */
+label {
+    width: 10%;
+}
+
+/* Estilo para los campos de entrada de todos los formularios */
+input[type="text"],
+input[type="date"] {
+    width: 15%;
+}

@@ -1,0 +1,29 @@
+{% extends 'inicio.html.twig' %}
+
+{% block title %}Página de Busqueda - Región de Terciarios{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+  {% block content %}
+    <h2>Búsqueda</h2>
+
+    {{ form_start(form) }}
+        {{ form_row(form.searchTermTecnicatura) }}
+    
+        {{ form_row(form.buscar) }} {# Muestra el botón de búsqueda #}
+    {{ form_end(form) }}
+
+    {% if results is not empty %}
+        <h3>Resultados:</h3>
+        <ul>
+            {% for result in results %}
+                <li>{{ result }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron resultados.</p>
+    {% endif %}
+{% endblock %}

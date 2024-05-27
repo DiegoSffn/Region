@@ -1,0 +1,46 @@
+{% extends 'inicio.html.twig' %}
+
+{% block title %}Página de Busqueda - Región de Terciarios{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<h1> Institutos </h1>
+        
+    <table class=tabla_home border=1>
+            <tr>
+                <th>Nombre</th>
+                <th>Numero</th>
+                <th>Url_instituto</th>
+                <th>Tipo</th>
+                <th>Email</th>
+                <th>Calle</th>
+                <th>Altura</th>
+                <th>Numero_cue</th>
+                <th>Instituto</th>
+            </tr>
+            {% if institutos %}
+            {% for instituto in institutos %}         
+            <tr>
+                <td>{{ instituto.nombre }}</td>           
+                <td>{{ instituto.numero }}</td>
+                <td>{{ instituto.urlInstituto }}</td>  
+                <td>{{ instituto.tipo }}</td>   
+                <td>{{ instituto.email }}</td>   
+                <td>{{ instituto.calle }}</td>   
+                <td>{{ instituto.altura }}</td> 
+                <td>{{ instituto.numeroCue }}</td>    
+                <td>{{ instituto.instituto }}</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+    </table>
+
+{% endblock %}
+
+
+

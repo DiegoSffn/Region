@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Region{% endblock %}
+
+{% block body %}
+    <h1>Editar Region</h1>
+
+    {{ include('region/_form.html.twig', {'button_label': 'Actualizar'}) }}
+
+    <a href="{{ path('app_region_index') }}">Volver</a>
+
+    {{ include('region/_delete_form.html.twig') }}
+{% endblock %}

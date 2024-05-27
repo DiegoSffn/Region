@@ -1,0 +1,27 @@
+{% extends 'inicio.html.twig' %}
+
+{% block title %}Página de Busqueda - Región de Terciarios{% endblock %}
+
+
+{% block content %}
+
+<h1> Tecnicaturas </h1>
+<table class=tabla_home border=1>
+            <tr>
+            <th>Nombre</th>
+            <th>Duracion</th>
+            <th>Cantidad_asignaturas</th>
+            <th>Numero_resolucion</th>
+            </tr>
+          {% if tecnicaturas %}
+          {% for tecnicatura in tecnicaturas %}
+            <tr>
+                <td>{{ tecnicatura.nombre }}</td>               
+                <td>{{ tecnicatura.duracion }}</td>
+                <td>{{ tecnicatura.cantidadAsignaturas }}</td>
+                <td>{{ tecnicatura.numeroResolucion }}</td>
+            </tr>
+          {% endfor %}
+          {% endif %}
+</table>
+{% endblock %}

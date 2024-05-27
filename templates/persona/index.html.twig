@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personas{% endblock %}
+
+{% block body %}
+    <h1>Personas</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha_nacimiento</th>
+                <th>Dni_pasaporte</th>
+                <th>Genero</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Partido</th>
+                <th>Calle</th>
+                <th>Numero</th>
+                <th>Piso</th>
+                <th>Departamento</th>
+                <th>Pasillo</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for persona in personas %}
+            <tr>
+                <td>{{ persona.nombre }}</td>
+                <td>{{ persona.apellido }}</td>
+                <td>{{ persona.fechaNacimiento ? persona.fechaNacimiento|date('Y-m-d') : '' }}</td>
+                <td>{{ persona.dniPasaporte }}</td>
+                <td>{{ persona.genero }}</td>
+                <td>{{ persona.email }}</td>
+                <td>{{ persona.telefono }}</td>
+                <td>{{ persona.partido }}</td>
+                <td>{{ persona.calle }}</td>
+                <td>{{ persona.numero }}</td>
+                <td>{{ persona.piso }}</td>
+                <td>{{ persona.departamento }}</td>
+                <td>{{ persona.pasillo }}</td>
+                <td>
+                    <a href="{{ path('app_persona_show', {'id': persona.id}) }}">Mostrar</a>
+                    <a href="{{ path('app_persona_edit', {'id': persona.id}) }}">Editar</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="15">no se encontraron datos</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_persona_new') }}">Crear</a>
+{% endblock %}

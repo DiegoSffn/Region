@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ofertas Educativas{% endblock %}
+
+{% block body %}
+    <h1>Ofertas Educativas</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ciclo_lectivo</th>
+                <th>Cupo</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for oferta_educativa in oferta_educativas %}
+            <tr>
+                <td>{{ oferta_educativa.cicloLectivo }}</td>
+                <td>{{ oferta_educativa.cupo }}</td>
+                <td>
+                    <a href="{{ path('app_oferta_educativa_show', {'id': oferta_educativa.id}) }}">Mostrar</a>
+                    <a href="{{ path('app_oferta_educativa_edit', {'id': oferta_educativa.id}) }}">Editar</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no se encotraron datos</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_oferta_educativa_new') }}">Crear</a>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Preinscripcion{% endblock %}
+
+{% block body %}
+    <h1>Preinscripcion</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Fecha</th>
+                <td>{{ preinscripcion.fecha ? preinscripcion.fecha|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_preinscripcion_index') }}">Volver</a>
+
+    <a href="{{ path('app_preinscripcion_edit', {'id': preinscripcion.id}) }}">Editar</a>
+
+    {{ include('preinscripcion/_delete_form.html.twig') }}
+{% endblock %}

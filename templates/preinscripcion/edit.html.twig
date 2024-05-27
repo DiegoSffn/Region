@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Preinscripcion{% endblock %}
+
+{% block body %}
+    <h1>Editar Preinscripcion</h1>
+
+    {{ include('preinscripcion/_form.html.twig', {'button_label': 'Actualizar'}) }}
+
+    <a href="{{ path('app_preinscripcion_index') }}">Volver</a>
+
+    {{ include('preinscripcion/_delete_form.html.twig') }}
+{% endblock %}

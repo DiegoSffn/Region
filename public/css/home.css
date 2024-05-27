@@ -1,0 +1,188 @@
+/* De aqui el head */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: indigo; /* Cambia este color a un gris claro */
+    border-bottom: 1px solid #ddd;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .logo-image {
+    max-width: 100%;
+    max-height: 100%px; 
+    /* Otros estilos si es necesario */
+}
+  
+  .welcome-msg {
+    flex: 14;
+    text-align: center;
+  }
+  
+  .login-button {
+    flex: 1;
+    text-align: right;
+  }
+  
+  /* Estilos para la segunda línea del encabezado */
+  .header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5; /* Usa el mismo gris claro */
+    color: #333;
+  }
+  
+  .menu-forms {
+    flex: 4; /* Ocupa el 80% del espacio */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+ 
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+  }
+
+
+
+.menu-buttons {
+    flex: 3; /* Ocupa el espacio restante */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+  
+  .menu-button {
+    display: inline-block;
+    width: 25%; /* Distribuir el ancho en 4 partes iguales */
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Agregado para la transición suave */
+    border-radius: 8px; /* Agrega esquinas redondeadas */
+}
+
+
+
+.menu-button:hover {
+    background-color: #ebe7e7;
+}
+
+  .menu-link {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-link:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+
+
+
+/*  de aqui las imagenes del home  */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+}
+
+.slider-img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Transición para efecto de agrandamiento */
+}
+
+.slider-img:hover {
+  transform: scale(1.2); /* Agranda la imagen al pasar el mouse sobre ella */
+  z-index: 1; /* Coloca la imagen en primer plano al pasar el mouse sobre ella */
+}
+
+/* Estilos para la ventana emergente (lightbox) */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox-content {
+  background-color: #fff;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.image-info {
+  margin-top: 50px;
+}
+
+
+
+/* de aqui el footer*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 1%; /* Altura del footer */
+  background-color: transparent; /* Hacer el fondo transparente */
+  color: #e7e1e1; /* Color del texto */
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Fondo sombreado para el texto */
+}
+
+@media (max-width: 1080px) {
+  .tabla_home {
+      width: 100% !important; /* Ancho del 100% en pantallas pequeñas */
+      margin-bottom: 5px; /* Ajusta el margen inferior según sea necesario */
+      overflow: hidden; /* Oculta el texto que se desborda del botón */
+  }
+}

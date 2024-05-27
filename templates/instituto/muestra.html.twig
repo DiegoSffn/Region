@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Instituto{% endblock %}
+
+{% block body %}
+    <h1>Instituto</h1>
+
+    <table class="table">
+        <tbody>
+
+            <tr>
+                <th>Nombre</th>
+                <td>{{ instituto.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Numero</th>
+                <td>{{ instituto.numero }}</td>
+            </tr>
+            <tr>
+                <th>Url_instituto</th>
+                <td>{{ instituto.urlInstituto }}</td>
+            </tr>
+            <tr>
+                <th>Tipo</th>
+                <td>{{ instituto.tipo }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ instituto.email }}</td>
+            </tr>
+            <tr>
+                <th>Calle</th>
+                <td>{{ instituto.calle }}</td>
+            </tr>
+            <tr>
+                <th>Altura</th>
+                <td>{{ instituto.altura }}</td>
+            </tr>
+            <tr>
+                <th>Numero_cue</th>
+                <td>{{ instituto.numeroCue }}</td>
+            </tr>
+             <tr>
+                <th>Instituto</th>
+                <td>{{ instituto.instituto }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_home') }}">Volver</a>
+
+   
+{% endblock %}

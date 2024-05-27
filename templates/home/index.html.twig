@@ -1,0 +1,39 @@
+{% extends 'inicio.html.twig' %}
+
+{% block title %}Página de Inicio - Región de Terciarios{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="grid-container">
+ 
+
+    <div class="slider-container">
+        <div class="slider">
+    	<img src="{{ asset('img/home/imagen4.png') }}" alt="Imagen 4" class="slider-img" data-info="Información de la imagen 4" data-link="index2.html">
+		<img src="{{ asset('img/home/imagen5.png') }}" class="slider-img" data-info="Información de la imagen 5" data-link="index2.html">
+   
+	    <img src="{{ asset('img/home/imagen3.png') }}" alt="Imagen 3" class="slider-img" data-info="Información de la imagen 3" data-link="index2.html">
+	
+    
+    </div>
+        <div class="slider">
+        <img src="{{ asset('img/home/imagen1.png') }}" alt="Imagen 1" class="slider-img" data-info="Información de la imagen 1" data-link="http:../pruebaslider/index2.html">
+        <img src="{{ asset('img/home/imagen2.png') }}" alt="Imagen 2" class="slider-img" data-info="Información de la imagen 2" data-link="index2.html">
+	    <img src="{{ asset('img/home/imagen6.jpg') }}" alt="Imagen 5" class="slider-img" data-info="Información de la imagen 5" data-link="index2.html">
+	</div>	
+        <div class="slider">
+        <img src="{{ asset('img/home/imagen7.jpeg') }}" alt="Imagen 5" class="slider-img" data-info="Información de la imagen 5" data-link="index2.html"> 
+		<img src="{{ asset('img/home/imagen8.jpg') }}" alt="Imagen 5" class="slider-img" data-info="Información de la imagen 5" data-link="index2.html"> 
+		<img src="{{ asset('img/home/imagen9.jpeg') }}" alt="Imagen 4" class="slider-img" data-info="Información de la imagen 4" data-link="index2.html">
+	</div>   
+    </div>
+
+  
+
+
+</div>
+{% endblock %}
